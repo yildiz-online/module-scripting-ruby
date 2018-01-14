@@ -35,7 +35,7 @@ import java.io.*;
  *
  * @author Grégory Van den Borre
  */
-final class RubyInterpreter implements ScriptInterpreter {
+public final class RubyInterpreter implements ScriptInterpreter {
 
     private final Logger logger = LogFactory.getInstance().getLogger(RubyInterpreter.class);
 
@@ -73,7 +73,7 @@ final class RubyInterpreter implements ScriptInterpreter {
      * +------------------------------------------------------------+
      * @return A new RubyInterpreter with simple single thread scope.
      */
-    static RubyInterpreter singleThread() {
+    public static RubyInterpreter singleThread() {
         return new RubyInterpreter(LocalContextScope.SINGLETHREAD);
     }
 
@@ -95,7 +95,7 @@ final class RubyInterpreter implements ScriptInterpreter {
      * +------------------------------------------------------------+
      * @return A new RubyInterpreter with concurrent scope.
      */
-    static RubyInterpreter concurrent() {
+    public static RubyInterpreter concurrent() {
         return new RubyInterpreter(LocalContextScope.CONCURRENT);
     }
 
@@ -114,7 +114,7 @@ final class RubyInterpreter implements ScriptInterpreter {
      * +------------------------------------------------------------+
      * @return A new RubyInterpreter with singleton scope.
      */
-    static RubyInterpreter singleton() {
+    public static RubyInterpreter singleton() {
         return new RubyInterpreter(LocalContextScope.SINGLETON);
     }
 
@@ -136,7 +136,7 @@ final class RubyInterpreter implements ScriptInterpreter {
      * +------------------------------------------------------------+
      * @return A new RubyInterpreter with thread safety scope.
      */
-    static RubyInterpreter threadSafe() {
+    public static RubyInterpreter threadSafe() {
         return new RubyInterpreter(LocalContextScope.THREADSAFE);
     }
 
