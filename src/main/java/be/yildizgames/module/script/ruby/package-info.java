@@ -28,4 +28,4 @@
  *
  * @author Grégory Van den Borre
  */
-package be.yildiz.module.script;
+package be.yildizgames.module.script.ruby;

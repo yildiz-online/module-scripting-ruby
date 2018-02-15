@@ -12,7 +12,7 @@ The scripting module is a component meant to use a scripting language to manipul
 
 ## Requirements
 
-To build this module, you will need a java 8 JDK, and Maven 3.
+To build this module, you will need a java 9 JDK, and Maven 3.
 
 ## Coding Style and other information
 
@@ -26,7 +26,7 @@ Wiki:
 https://yildiz.atlassian.net/wiki
 
 Quality report:
-https://sonarcloud.io/dashboard?id=be.yildiz-games%3Amodule-scripting
+https://sonarqube.com/overview?id=be.yildiz-games:module-scripting
 
 ## License
 

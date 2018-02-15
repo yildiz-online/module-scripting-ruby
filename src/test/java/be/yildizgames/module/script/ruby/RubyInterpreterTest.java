@@ -23,9 +23,13 @@
  * THE  SOFTWARE.
  */
 
-package be.yildiz.module.script;
+package be.yildizgames.module.script.ruby;
 
 import be.yildizgames.common.shape.Box;
+import be.yildizgames.module.script.ParsedScript;
+import be.yildizgames.module.script.ScriptException;
+import be.yildizgames.module.script.ScriptInterpreter;
+import be.yildizgames.module.script.ruby.RubyInterpreter;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
