@@ -48,7 +48,7 @@ import java.io.Writer;
  *
  * @author Grégory Van den Borre
  */
-public final class RubyInterpreter implements ScriptInterpreter {
+public final class RubyInterpreter extends ScriptInterpreter {
 
     private final Logger logger = LogFactory.getInstance().getLogger(RubyInterpreter.class);
 
