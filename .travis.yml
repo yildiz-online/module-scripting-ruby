@@ -1,21 +1,6 @@
-env:
-  global:
-    - secure: "ixz3q4jjmN1GUgJDHkqqBCyECZvdoAzmpPH/7Gdn68IGiwKHO2v1BNpP1WfltMvz+45k+EFdqnwdXzJioSA8YeUj1KfeieGyVvOiCjClEQCUJIVljrpTbbzp7Iqz0+e3zfsBb0HRefMT/jVjdZbKkbHmzdxJLvTTGhXIg+XWnnzhD5fDE0uvcjur5tNDdp5/01sOdWug4810kqdNvNTARpnPFyguTDQ6pImvq2FoVnmsJIr9k8m/FUsqA+kPADpoNCvRhDHfS3uQuwT2TkPDW0w3yuSkSqTy9i3zh2q+KT1sC0MlRQ1WZ2EujADJkKFtPJ+pyjRorWnQYyl864n53/6Z2lVAJJN0p91iGKHgXP7/ThxDiz33xy3KEvIm5p1iCaTAXBCWqMR0YgLOwWdCh9lj0EG71zalTyNbzNwKMQlvzfrJEPbGk9PszPTfbx0AF48KA6L21/ZgXaC2VkKbB5jKe9yJp+xTVm3B9SriMJDzgdXfMt3qHz6C2E8IR8rsAstrmzQ6vOzGi8g73pvjWlcyf/9lInblVdU6wBBWlTtzgh/XxFJYJBlmg+TqxiuK1Bajg6LuNZRjlbw41onOubs4xTrO//hKEIhLoaCoPCwD2DIj0ET/Pd0sUyX+scETsp644Y1p+2GTfl1e/GrxYePfzpGgcuhmwYmR/ujnSb8="
-
-
 language: java
 jdk:
   - oraclejdk9
-
-addons:
-  coverity_scan:
-    project:
-      name: "yildiz-online/module-scripting-ruby"
-      description: "Build submitted via Travis CI"
-    notification_email: vandenborre.gregory@hotmail.fr
-    build_command_prepend: "mvn clean"
-    build_command:   "mvn -DskipTests=true compile -s settings.xml"
-    branch_pattern: master
 
 script:
   - mvn -V -B -s settings.xml test
