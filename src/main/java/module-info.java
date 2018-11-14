@@ -28,7 +28,7 @@ module be.yildizgames.module.scripting.ruby {
     requires be.yildizgames.common.logging;
 
     requires slf4j.api;
-    requires jruby.core;
+    requires org.jruby;
 
     exports be.yildizgames.module.script.ruby;
 }
