@@ -25,7 +25,6 @@
 
 package be.yildizgames.module.script.ruby;
 
-import be.yildizgames.common.shape.Box;
 import be.yildizgames.module.script.ParsedScript;
 import be.yildizgames.module.script.ScriptException;
 import be.yildizgames.module.script.ScriptInterpreter;
@@ -87,8 +86,8 @@ class RubyInterpreterTest {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertEquals(4L, interpreter.runCommand("2+2"));
         assertEquals(null, interpreter.runCommand("puts 'testing puts return code'"));
-        assertEquals(Box.cube(5), interpreter.runCommand("a = Java::be.yildizgames.common.shape.Box.new(5)"));
-        assertEquals(Box.cube(5), interpreter.runCommand("a"));
+        assertEquals("test", interpreter.runCommand("a = Java::be.lang.String.new('test')"));
+        assertEquals("test", interpreter.runCommand("a"));
     }
 
     @Test
