@@ -29,10 +29,13 @@ import be.yildizgames.common.shape.Box;
 import be.yildizgames.module.script.ParsedScript;
 import be.yildizgames.module.script.ScriptException;
 import be.yildizgames.module.script.ScriptInterpreter;
-import be.yildizgames.module.script.ruby.RubyInterpreter;
 import org.junit.jupiter.api.Test;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -84,8 +87,8 @@ class RubyInterpreterTest {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertEquals(4L, interpreter.runCommand("2+2"));
         assertEquals(null, interpreter.runCommand("puts 'testing puts return code'"));
-        assertEquals(new Box(5), interpreter.runCommand("a = Java::be.yildizgames.common.shape.Box.new(5)"));
-        assertEquals(new Box(5), interpreter.runCommand("a"));
+        assertEquals(Box.cube(5), interpreter.runCommand("a = Java::be.yildizgames.common.shape.Box.new(5)"));
+        assertEquals(Box.cube(5), interpreter.runCommand("a"));
     }
 
     @Test
