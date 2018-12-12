@@ -50,7 +50,7 @@
     <dependency>
       <groupId>be.yildiz-games</groupId>
       <artifactId>module-scripting</artifactId>
-      <version>2.0.2</version>
+      <version>2.0.3-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.jruby</groupId>
