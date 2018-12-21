@@ -25,7 +25,6 @@
 
 package be.yildizgames.module.script.ruby;
 
-import be.yildizgames.common.logging.LogFactory;
 import be.yildizgames.module.script.ParsedScript;
 import be.yildizgames.module.script.ScriptException;
 import be.yildizgames.module.script.ScriptInterpreter;
@@ -36,6 +35,7 @@ import org.jruby.embed.ParseFailedException;
 import org.jruby.embed.ScriptingContainer;
 import org.jruby.exceptions.RaiseException;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -50,7 +50,7 @@ import java.io.Writer;
  */
 public final class RubyInterpreter extends ScriptInterpreter {
 
-    private final Logger logger = LogFactory.getInstance().getLogger(RubyInterpreter.class);
+    private final Logger logger = LoggerFactory.getLogger(RubyInterpreter.class);
 
     /**
      * JRuby container to execute scripts.
