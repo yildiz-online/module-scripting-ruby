@@ -43,11 +43,11 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Grégory Van den Borre
  */
-class RubyInterpreterTest {
+public class RubyInterpreterTest {
 
 
     //@Test
-    void testSetOutput() throws Exception {
+    public void testSetOutput() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         Path folder= Files.createTempDirectory("test");
         File f = new File(folder.getRoot().toFile().getAbsolutePath() + "/test.txt");
@@ -63,14 +63,14 @@ class RubyInterpreterTest {
     }
 
     @Test
-    void testRunScriptNotExists() throws Exception {
+    public void testRunScriptNotExists() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertThrows(ScriptException.class, () -> interpreter.runScript("none.rb"));
 
     }
 
     @Test
-    void testRunScript() throws Exception {
+    public void testRunScript() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         ParsedScript ps = interpreter.runScript(getFile().getAbsolutePath());
         ps.run();
@@ -82,7 +82,7 @@ class RubyInterpreterTest {
     }
 
     @Test
-    void testRunCommand() throws Exception {
+    public void testRunCommand() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertEquals(4L, interpreter.runCommand("2+2"));
         assertEquals(null, interpreter.runCommand("puts 'testing puts return code'"));
@@ -91,25 +91,25 @@ class RubyInterpreterTest {
     }
 
     @Test
-    void testPrint() {
+    public void testPrint() {
         // fail("Not yet implemented");
     }
 
     @Test
-    void testGetFileHeader() throws Exception {
+    public void testGetFileHeader() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertEquals("#!//usr//bin//ruby\n", interpreter.getFileHeader());
 
     }
 
     @Test
-    void testGetFileExtension() throws Exception {
+    public void testGetFileExtension() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertEquals("rb", interpreter.getFileExtension());
     }
 
     @Test
-    void testConstructorThreadSafe() {
+    public void testConstructorThreadSafe() {
         assertNotNull(RubyInterpreter.threadSafe());
     }
 
@@ -124,7 +124,7 @@ class RubyInterpreterTest {
     }
 
     @Test
-    void testClose() throws Exception {
+    public void testClose() throws Exception {
         ScriptInterpreter i = RubyInterpreter.singleThread();
         assertFalse(i.isClosed());
         i.close();
