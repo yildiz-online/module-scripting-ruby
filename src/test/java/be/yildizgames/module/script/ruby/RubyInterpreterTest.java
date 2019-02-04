@@ -114,12 +114,12 @@ public class RubyInterpreterTest {
     }
 
     @Test
-    void testConstructorSingleton() {
+    public void testConstructorSingleton() {
         assertNotNull(RubyInterpreter.singleton());
     }
 
     @Test
-    void testConstructorConcurrent() {
+    public void testConstructorConcurrent() {
         assertNotNull(RubyInterpreter.concurrent());
     }
 
