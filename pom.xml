@@ -54,7 +54,7 @@
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby</artifactId>
-      <version>9.2.5.0</version>
+      <version>9.2.6.0</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
