@@ -70,7 +70,7 @@
         </exclusion>
         <exclusion>
           <groupId>com.github.jnr</groupId>
-          <artifactId>jnr-jffi</artifactId>
+          <artifactId>jffi</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
