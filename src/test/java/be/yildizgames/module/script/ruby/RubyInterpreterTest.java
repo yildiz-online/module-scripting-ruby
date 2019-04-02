@@ -45,7 +45,6 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RubyInterpreterTest {
 
-
     //@Test
     public void testSetOutput() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
@@ -88,11 +87,6 @@ public class RubyInterpreterTest {
         assertEquals(null, interpreter.runCommand("puts 'testing puts return code'"));
         assertEquals("test", interpreter.runCommand("a = Java::java.lang.String.new('test')"));
         assertEquals("test", interpreter.runCommand("a"));
-    }
-
-    @Test
-    public void testPrint() {
-        // fail("Not yet implemented");
     }
 
     @Test

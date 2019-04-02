@@ -22,6 +22,9 @@
  *
  */
 
+/**
+ * @author Grégory Van den Borre
+ */
 module be.yildizgames.module.scripting.ruby {
 
     requires be.yildizgames.module.scripting;

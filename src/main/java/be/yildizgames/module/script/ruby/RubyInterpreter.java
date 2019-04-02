@@ -158,7 +158,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
      *
      * @throws ScriptException If the initialization failed.
      */
-    public void initialize() throws ScriptException {
+    public final void initialize() throws ScriptException {
         this.runCommand("require 'java'");
     }
 
@@ -168,19 +168,19 @@ public final class RubyInterpreter extends ScriptInterpreter {
      * @param clazz Class to register.
      * @throws ScriptException If the class cannot be registered.
      */
-    public void registerClass(@SuppressWarnings("rawtypes") final Class clazz) throws ScriptException {
+    public final void registerClass(@SuppressWarnings("rawtypes") final Class clazz) throws ScriptException {
         String packageName = clazz.getPackage().getName();
         String className = clazz.getSimpleName();
         this.runCommand("java_import Java::" + packageName + "::" + className);
     }
 
     @Override
-    public void setOutput(final Writer output) {
+    public final void setOutput(final Writer output) {
         this.container.setOutput(output);
     }
 
     @Override
-    public ParsedScript runScript(final String file) throws ScriptException {
+    public final ParsedScript runScript(final String file) throws ScriptException {
         try (BufferedInputStream stream = new BufferedInputStream(new FileInputStream(new File(file)))) {
             return this.container.parse(stream, file)::run;
         } catch (IOException e) {
@@ -189,7 +189,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
     }
 
     @Override
-    public Object runCommand(final String command) throws ScriptException {
+    public final Object runCommand(final String command) throws ScriptException {
         try {
             return this.container.runScriptlet(command);
         } catch (RaiseException | EvalFailedException | ParseFailedException e) {
@@ -198,7 +198,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
     }
 
     @Override
-    public Object getClassMethods(final Class<?> classToGet) {
+    public final Object getClassMethods(final Class<?> classToGet) {
         try {
             return this.runCommand(classToGet.getName() + ".java_class.declared_instance_methods");
         } catch (ScriptException e) {
@@ -209,7 +209,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
     }
 
     @Override
-    public void print(final String toPrint) {
+    public final void print(final String toPrint) {
         try {
             this.runCommand("puts '" + toPrint + "';");
         } catch (ScriptException e) {
@@ -218,7 +218,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
     }
 
     @Override
-    public String getFileHeader() {
+    public final String getFileHeader() {
         return "#!//usr//bin//ruby\n";
     }
 
@@ -226,17 +226,17 @@ public final class RubyInterpreter extends ScriptInterpreter {
      * @return rb
      */
     @Override
-    public String getFileExtension() {
+    public final String getFileExtension() {
         return "rb";
     }
 
     @Override
-    public boolean isClosed() {
+    public final boolean isClosed() {
         return this.closed;
     }
 
     @Override
-    public void close() {
+    public final void close() {
         this.closed = true;
         this.container.terminate();
     }
