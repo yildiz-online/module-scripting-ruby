@@ -68,6 +68,10 @@
           <groupId>com.github.jnr</groupId>
           <artifactId>jnr-posix</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
+          <artifactId>jnr-jffi</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -84,6 +88,11 @@
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-enxio</artifactId>
       <version>0.20</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.jnr</groupId>
+      <artifactId>jnr-jffi</artifactId>
+      <version>1.2.18</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
