@@ -91,7 +91,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.jnr</groupId>
-      <artifactId>jnr-jffi</artifactId>
+      <artifactId>jffi</artifactId>
       <version>1.2.18</version>
     </dependency>
     <dependency>
