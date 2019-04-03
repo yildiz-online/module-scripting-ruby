@@ -51,6 +51,7 @@
       <artifactId>module-scripting</artifactId>
       <version>2.0.4-SNAPSHOT</version>
     </dependency>
+
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby</artifactId>
@@ -74,6 +75,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-constants</artifactId>
@@ -85,6 +87,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-posix</artifactId>
@@ -100,6 +103,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-enxio</artifactId>
@@ -111,6 +115,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jffi</artifactId>
@@ -122,11 +127,19 @@
         </exclusion>
       </exclusions>
     </dependency>
+
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-ffi</artifactId>
       <version>2.1.9</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
+          <artifactId>jffi</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
