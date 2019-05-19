@@ -32,6 +32,7 @@ import be.yildizgames.module.script.ScriptInterpreterProvider;
  * @author Grégory Van den Borre
  */
 public class RubyInterpreterProvider implements ScriptInterpreterProvider{
+
     @Override
     public ScriptInterpreter getInterpreter() {
         return RubyInterpreter.threadSafe();

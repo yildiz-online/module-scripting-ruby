@@ -124,5 +124,4 @@ public class RubyInterpreterTest {
         i.close();
         assertTrue(i.isClosed());
     }
-
 }

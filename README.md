@@ -12,7 +12,7 @@ The scripting module is a component meant to use a scripting language to manipul
 
 ## Requirements
 
-To build this module, you will need a java 9 JDK, and Maven 3.
+To build this module, you will need the latest JDK, and Maven 3.
 
 ## Coding Style and other information
 

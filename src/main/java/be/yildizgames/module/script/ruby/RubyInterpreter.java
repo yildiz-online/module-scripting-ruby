@@ -50,6 +50,7 @@ import java.io.Writer;
  */
 public final class RubyInterpreter extends ScriptInterpreter {
 
+
     private final Logger logger = LoggerFactory.getLogger(RubyInterpreter.class);
 
     /**
