@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!--
   ~ This file is part of the Yildiz-Engine project, licenced under the MIT License  (MIT)
   ~
@@ -23,27 +25,32 @@
   ~ THE  SOFTWARE.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
+
   <name>Yildiz-Engine Module Scripting Ruby</name>
   <description>Module containing the ruby implementation for scripting.</description>
-  <url>https://bitbucket.org/yildiz-engine-team/module-scripting-ruby</url>
+  <inceptionYear>2014</inceptionYear>
+  <url>https://engine.yildiz-games.be</url>
 
   <artifactId>module-scripting-ruby</artifactId>
   <version>1.0.3-SNAPSHOT</version>
 
-  <packaging>jar</packaging>
-  <inceptionYear>2014</inceptionYear>
-  <scm>
-    <connection>scm:git:https://bitbucket.org/yildiz-engine-team/module-scripting-ruby</connection>
-    <developerConnection>scm:git:https://bitbucket.org/yildiz-engine-team/module-scripting-ruby</developerConnection>
-    <url>https://bitbucket.org/yildiz-engine-team/module-scripting-ruby</url>
-  </scm>
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
     <version>3.0.5</version>
   </parent>
+
+  <packaging>jar</packaging>
+
+  <scm>
+    <connection>scm:git:https://github.com/yildiz-online/module-scripting-ruby</connection>
+    <developerConnection>scm:git:https://github.com/yildiz-online/module-scripting-ruby</developerConnection>
+    <url>https://github.com/yildiz-online/module-scripting-ruby</url>
+  </scm>
 
   <dependencies>
     <dependency>
