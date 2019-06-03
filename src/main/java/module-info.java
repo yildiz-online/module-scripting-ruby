@@ -30,7 +30,6 @@ module be.yildizgames.module.scripting.ruby {
     requires be.yildizgames.module.scripting;
     requires be.yildizgames.common.logging;
 
-    requires slf4j.api;
     requires org.jruby;
 
     exports be.yildizgames.module.script.ruby;

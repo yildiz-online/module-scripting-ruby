@@ -34,8 +34,6 @@ import org.jruby.embed.LocalVariableBehavior;
 import org.jruby.embed.ParseFailedException;
 import org.jruby.embed.ScriptingContainer;
 import org.jruby.exceptions.RaiseException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -51,7 +49,7 @@ import java.io.Writer;
 public final class RubyInterpreter extends ScriptInterpreter {
 
 
-    private final Logger logger = LoggerFactory.getLogger(RubyInterpreter.class);
+    private final System.Logger logger = System.getLogger(RubyInterpreter.class.getName());
 
     /**
      * JRuby container to execute scripts.
@@ -203,7 +201,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
         try {
             return this.runCommand(classToGet.getName() + ".java_class.declared_instance_methods");
         } catch (ScriptException e) {
-            this.logger.error("Script error", e);
+            this.logger.log(System.Logger.Level.ERROR, "Script error", e);
             return e.getMessage();
         }
 
@@ -214,7 +212,7 @@ public final class RubyInterpreter extends ScriptInterpreter {
         try {
             this.runCommand("puts '" + toPrint + "';");
         } catch (ScriptException e) {
-            this.logger.error("Script error", e);
+            this.logger.log(System.Logger.Level.ERROR, "Script error", e);
         }
     }
 
