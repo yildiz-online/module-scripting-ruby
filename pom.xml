@@ -114,11 +114,15 @@
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-enxio</artifactId>
-      <version>0.20</version>
+      <version>0.21</version>
       <exclusions>
         <exclusion>
           <groupId>com.github.jnr</groupId>
           <artifactId>jnr-constants</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
+          <artifactId>jnr-ffi</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -138,7 +142,7 @@
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-ffi</artifactId>
-      <version>2.1.9</version>
+      <version>2.1.10</version>
       <exclusions>
         <exclusion>
           <groupId>com.github.jnr</groupId>
