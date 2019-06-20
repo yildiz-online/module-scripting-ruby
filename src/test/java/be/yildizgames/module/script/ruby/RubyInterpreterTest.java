@@ -84,7 +84,7 @@ public class RubyInterpreterTest {
     public void testRunCommand() throws Exception {
         ScriptInterpreter interpreter = RubyInterpreter.singleThread();
         assertEquals(4L, interpreter.runCommand("2+2"));
-        assertEquals(null, interpreter.runCommand("puts 'testing puts return code'"));
+        assertNull(interpreter.runCommand("puts 'testing puts return code'"));
         assertEquals("test", interpreter.runCommand("a = Java::java.lang.String.new('test')"));
         assertEquals("test", interpreter.runCommand("a"));
     }
