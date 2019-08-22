@@ -62,7 +62,7 @@
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby</artifactId>
-      <version>9.2.7.0</version>
+      <version>9.2.8.0</version>
       <exclusions>
         <exclusion>
           <groupId>com.github.jnr</groupId>
