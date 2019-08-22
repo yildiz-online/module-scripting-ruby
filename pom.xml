@@ -114,7 +114,7 @@
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-enxio</artifactId>
-      <version>0.21</version>
+      <version>0.22</version>
       <exclusions>
         <exclusion>
           <groupId>com.github.jnr</groupId>
