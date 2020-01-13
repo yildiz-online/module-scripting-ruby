@@ -29,7 +29,7 @@ module be.yildizgames.module.scripting.ruby {
 
     requires be.yildizgames.module.scripting;
 
-    requires org.jruby;
+    requires org.jruby.core;
 
     exports be.yildizgames.module.script.ruby;
 }
