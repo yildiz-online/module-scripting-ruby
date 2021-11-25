@@ -25,11 +25,10 @@
 /**
  * @author Grégory Van den Borre
  */
-module be.yildizgames.module.scripting.ruby {
+open module be.yildizgames.module.scripting.ruby {
 
     requires be.yildizgames.module.scripting;
-
-    requires org.jruby.core;
+    requires org.jruby;
 
     exports be.yildizgames.module.script.ruby;
 }

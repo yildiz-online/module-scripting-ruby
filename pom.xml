@@ -41,14 +41,10 @@
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
-    <version>5.0.1</version>
+    <version>5.0.2</version>
   </parent>
 
   <packaging>jar</packaging>
-
-  <properties>
-    <java.version>11</java.version>
-  </properties>
 
   <scm>
     <connection>scm:git:https://github.com/yildiz-online/module-scripting-ruby</connection>
