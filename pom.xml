@@ -58,7 +58,6 @@
       <artifactId>module-scripting</artifactId>
       <version>2.0.6</version>
     </dependency>
-
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby</artifactId>
@@ -90,7 +89,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
     <dependency>
       <groupId>org.jruby.joni</groupId>
       <artifactId>joni</artifactId>
@@ -102,15 +100,11 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
     <dependency>
       <groupId>org.jruby.jcodings</groupId>
       <artifactId>jcodings</artifactId>
       <version>1.0.58</version>
     </dependency>
-
-
-
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-constants</artifactId>
@@ -122,7 +116,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-posix</artifactId>
@@ -138,7 +131,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-enxio</artifactId>
@@ -154,7 +146,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jffi</artifactId>
@@ -166,7 +157,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>com.github.jnr</groupId>
       <artifactId>jnr-ffi</artifactId>
@@ -178,11 +168,20 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.2.1</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
