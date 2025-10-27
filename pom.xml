@@ -106,6 +106,14 @@
           <groupId>com.github.jnr</groupId>
           <artifactId>jffi</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
+          <artifactId>jnr-enxio</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
+          <artifactId>jnr-posix</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>  
     <dependency>
