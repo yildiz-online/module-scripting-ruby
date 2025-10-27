@@ -46,6 +46,10 @@
 
   <packaging>jar</packaging>
 
+  <properties>
+    <dependency.jruby.version>10.0.2.0</dependency.jruby.version>
+  </properties>  
+
   <scm>
     <connection>scm:git:https://github.com/yildiz-online/module-scripting-ruby</connection>
     <developerConnection>scm:git:https://github.com/yildiz-online/module-scripting-ruby</developerConnection>
@@ -61,7 +65,7 @@
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby</artifactId>
-      <version>10.0.2.0</version>
+      <version>${dependency.jruby.version}</version>
       <exclusions>
         <exclusion>
           <groupId>com.github.jnr</groupId>
@@ -87,8 +91,23 @@
           <groupId>org.jruby.jcodings</groupId>
           <artifactId>jcodings</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>org.jruby</groupId>
+          <artifactId>jruby-base</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.jruby</groupId>
+      <artifactId>jruby-base</artifactId>
+      <version>${dependency.jruby.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
+          <artifactId>jffi</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>  
     <dependency>
       <groupId>org.jruby.joni</groupId>
       <artifactId>joni</artifactId>
