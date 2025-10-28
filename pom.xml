@@ -108,6 +108,10 @@
         </exclusion>
         <exclusion>
           <groupId>com.github.jnr</groupId>
+          <artifactId>jffi</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.github.jnr</groupId>
           <artifactId>jnr-enxio</artifactId>
         </exclusion>
         <exclusion>
