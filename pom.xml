@@ -47,7 +47,7 @@
   <packaging>jar</packaging>
 
   <properties>
-    <dependency.jruby.version>10.1.0.0</dependency.jruby.version>
+    <dependency.jruby.version>10.1.1.0</dependency.jruby.version>
   </properties>  
 
   <scm>
